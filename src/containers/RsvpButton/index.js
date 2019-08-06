@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import { firebasedb } from '../../utils/firebase';
 import WrappedRsvpForm from '../RsvpForm';
 
+import './style.scss';
+
 class RsvpButton extends React.Component {
   constructor(props) {
     super(props);
@@ -71,13 +73,14 @@ class RsvpButton extends React.Component {
     } = this.state;
     return (
       <div>
-        <Button type="primary" onClick={this.showModal}>
+        <div className="rsvp-btn" onClick={this.showModal}>
           {confirmed ? 'Going' : 'RSVP'}
-        </Button>
+        </div>
         <Modal
           footer={null}
           title={`RSVP for ${eventName}`}
           visible={this.state.visible}
+          onCancel={this.handleClose}
           closable
         >
           <WrappedRsvpForm
