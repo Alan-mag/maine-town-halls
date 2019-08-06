@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Divider, Row, Col } from 'antd';
 
+import RsvpButton from '../../containers/RsvpButton';
+
 import './style.scss';
 
 const EventCard = (props) => {
@@ -11,10 +13,12 @@ const EventCard = (props) => {
   return (
     <Card
       className="event-card"
-      cover={<img src={`https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&key=AIzaSyDIJ9XX2ZvRKCJcFRrl-lRanEtFUow4piM&signature=pgcz8_2FdcdBqftd6BrlxesXTjA=`} alt="map" />}
+      // cover={<img src={`http://maps.googleapis.com/maps/api/staticmap?center=${eventData.formatLatLng}&zoom=10&size=600x300&maptype=roadmap&key=AIzaSyBkezlJl3YY3_PT6sfu4Kc99hda3az0Heg`} alt="map" />}
       title={
         <div className="event-card-header">
-          <div className="member-icon"><img src={'https://townhallproject.com/Images/map/circle-activism.svg'} alt="member-pic" /></div>
+          <div className="member-icon">
+            {/*<img src={''} alt="member-pic" />*/}
+          </div>
           <div className="event-card-header-title">
             <span className="title">{eventData.displayName}</span> <br /> <span className="subtitle">{eventData.district}</span>
           </div>
@@ -29,7 +33,10 @@ const EventCard = (props) => {
               <h3>{eventData.eventName}</h3>
             </Col>
             <Col span={12}>
-              <div className="rsvp-btn">RSVP</div>
+              <RsvpButton
+                eventName={eventData.eventName}
+                eventId={eventData.id}
+              />
             </Col>
           </Row>
         </div>
@@ -52,6 +59,9 @@ const EventCard = (props) => {
         <div className="event-card-section-content">
           {eventData.notes}
         </div>
+      </div>
+      <div className="event-card-map">
+        <img src={`http://maps.googleapis.com/maps/api/staticmap?center=${eventData.formatLatLng}&zoom=12&size=600x300&maptype=roadmap&style=element:geometry%7Ccolor:0xf5f5f5&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x616161&style=element:labels.text.stroke%7Ccolor:0xf5f5f5&style=feature:administrative.land_parcel%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:road%7Celement:geometry%7Ccolor:0xffffff&style=feature:road.arterial%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:road.highway%7Celement:geometry%7Ccolor:0xdadada&style=feature:road.highway%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:transit.line%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:transit.station%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:water%7Celement:geometry%7Ccolor:0xc9c9c9&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&key=AIzaSyBkezlJl3YY3_PT6sfu4Kc99hda3az0Heg`} alt="map" />
       </div>
       <div className="event-card-footer"></div>
     </Card>

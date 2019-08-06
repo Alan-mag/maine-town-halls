@@ -20,9 +20,9 @@
     padding: 0px !important;
   }
   .event-card-header {
-    z-index: 999;
+    z-index: 3;
     .member-icon {
-      z-index: 9999;
+      z-index: 3;
       width: 50px;
       height: 50px;
       position: absolute;
@@ -30,7 +30,7 @@
       margin-left: -15px;
       margin-top: 3px;
       overflow: hidden;
-      background: #feddbd;
+      background: #e91e63;
       box-shadow: 0px 0px 6px 0px #b7b4b4;
       img {
         z-index: 9999;
@@ -94,11 +94,16 @@
     // height: 100px;
     // background: lightseagreen
   }
+  .event-card-map {
+    img {
+      width: 100%;
+    }
+  }
   .event-card-footer {
-    height: 50px;
-    background: #013778;
+    height: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    background: #607D8B;
   }
 }
 
@@ -109,7 +114,7 @@
 }
 
 .ant-divider-inner-text {
-  color: #bfbfbf;
+  color: #607D8B;
   font-size: 12px;
 }
 .ant-divider-horizontal.ant-divider-with-text-left::after {
