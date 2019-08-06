@@ -8,6 +8,7 @@ import {
 
 import MainLayout from '../MainLayout';
 import './style.scss';
+import RsvpButton from '../RsvpButton';
 
 const event1 = {
   displayName: 'Richard Durbin',
@@ -50,18 +51,26 @@ const event2 = {
 }
 
 class Homepage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <MainLayout>
         <Row gutter={16}>
           <Col span={12}>
-            <EventCard eventData={event1} />
+            <Card className="event-card">
+              Card 1
+              <RsvpButton
+                eventName="Event 1"
+                eventId="event1id"
+              />
+            </Card>
           </Col>
           <Col span={12}>
-            <EventCard eventData={event2} />
+            <Card className="event-card">
+              <RsvpButton
+                eventName="Event 2"
+                eventId="event2id"
+              />
+            </Card>
           </Col>
         </Row>
       </MainLayout>
