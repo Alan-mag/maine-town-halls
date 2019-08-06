@@ -8,11 +8,9 @@ import {
 
 import MainLayout from '../MainLayout';
 import './style.scss';
+import RsvpButton from '../RsvpButton';
 
 class Homepage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <MainLayout>
@@ -20,11 +18,18 @@ class Homepage extends React.Component {
           <Col span={12}>
             <Card className="event-card">
               Card 1
+              <RsvpButton
+                eventName="Event 1"
+                eventId="event1id"
+              />
             </Card>
           </Col>
           <Col span={12}>
             <Card className="event-card">
-              Card 2
+              <RsvpButton
+                eventName="Event 2"
+                eventId="event2id"
+              />
             </Card>
           </Col>
         </Row>
