@@ -8,9 +8,9 @@ import {
 
 import MainLayout from '../MainLayout';
 import './style.scss';
-import RsvpButton from '../RsvpButton';
 
 const event1 = {
+  formatLatLng: '43.6591,-70.2568',
   displayName: 'Richard Durbin',
   address: '104 Hart Senate Office Building, Washington, DC 20002',
   party: 'Democratic',
@@ -31,6 +31,7 @@ const event1 = {
 }
 
 const event2 = {
+  formatLatLng: '44.1004,-70.2148',
   displayName: 'displayName',
   address: 'address',
   party: 'party',
@@ -56,21 +57,10 @@ class Homepage extends React.Component {
       <MainLayout>
         <Row gutter={16}>
           <Col span={12}>
-            <Card className="event-card">
-              Card 1
-              <RsvpButton
-                eventName="Event 1"
-                eventId="event1id"
-              />
-            </Card>
+            <EventCard eventData={event1} />
           </Col>
           <Col span={12}>
-            <Card className="event-card">
-              <RsvpButton
-                eventName="Event 2"
-                eventId="event2id"
-              />
-            </Card>
+            <EventCard eventData={event2} />
           </Col>
         </Row>
       </MainLayout>
