@@ -8,9 +8,6 @@ const HTMLPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-
-const { ProvidePlugin } = require('webpack');
-
 const plugins = [
   new EnvironmentPlugin({
     DATABASE_URL: 'https://townhalltestingsms.firebaseio.com',
@@ -19,11 +16,6 @@ const plugins = [
     MESSAGING_SENDER_ID: 86976100332,
     PROJECT_ID: 'townhalltestingsms',
     STORAGE_BUCKET: 'townhalltestingsms.appspot.com',
-  }),
-  new ProvidePlugin({
-    jQuery: 'jquery',
-    $: 'jquery',
-    jquery: 'jquery',
   }),
   new MiniCssExtractPlugin({
     // Options similar to the same options in webpackOptions.output
@@ -48,7 +40,7 @@ const plugins = [
 ];
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
 
   plugins,
   resolve: {
