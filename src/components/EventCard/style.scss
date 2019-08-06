@@ -1,0 +1,117 @@
+.event-card {
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #cacaca;
+  .ant-card-cover {
+    position: relative;
+  }
+  .ant-card-head-title {
+    padding: 5px !important; 
+  }
+  .ant-card-cover:after {
+    box-shadow: inset 0px 0px 5px 3px #c5c3c3;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .ant-card-body {
+    padding: 0px !important;
+  }
+  .event-card-header {
+    z-index: 999;
+    .member-icon {
+      z-index: 9999;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      border-radius: 50%;
+      margin-left: -15px;
+      margin-top: 3px;
+      overflow: hidden;
+      background: #feddbd;
+      box-shadow: 0px 0px 6px 0px #b7b4b4;
+      img {
+        z-index: 9999;
+        height: 50px;
+        width: 50px;
+      }
+    }
+    .event-card-header-title {
+      margin-left: 50px;
+      .title {
+        font-size: 20px;
+      }
+      .subtitle {
+        color: darkgrey;
+      }
+    }
+  }
+  .event-card-title {
+    // height: 150px;
+    // background: lightcyan
+    .rsvp-btn {
+      padding-left: 8px;
+      padding-right: 8px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      // background: url(https://image.freepik.com/free-vector/city-map-background-with-star-middle_23-2147619494.jpg);
+      background: #2196f3;
+      background-size: cover;
+      border-radius: 3px;
+      font-size: 20px;
+      font-weight: 600;
+      width: 150px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+  }
+  .event-card-date {
+    .directions-btn {
+      padding-left: 8px;
+      padding-right: 8px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      // background: url(https://image.freepik.com/free-vector/city-map-background-with-star-middle_23-2147619494.jpg);
+      background: #d2d2d2;
+      background-size: cover;
+      border-radius: 3px;
+      font-size: 20px;
+      font-weight: 600;
+      width: 150px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+  }
+  .event-card-notes {
+    // height: 100px;
+    // background: lightseagreen
+  }
+  .event-card-footer {
+    height: 50px;
+    background: #013778;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+.event-card-section-content {
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 10px;
+}
+
+.ant-divider-inner-text {
+  color: #bfbfbf;
+  font-size: 12px;
+}
+.ant-divider-horizontal.ant-divider-with-text-left::after {
+  border: none !important;
+}
