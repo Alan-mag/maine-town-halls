@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
-import createHistory from 'history/createBrowserHistory';
-import Pram from 'pram';
+// import createHistory from 'history/createBrowserHistory';
+// import Pram from 'pram';
 // import { find, isArray } from 'lodash';
 
 // import selectionStateBranch from './state/selections';
@@ -14,11 +14,11 @@ import './style/app.scss';
 // import states from './data/states';
 
 // const store = configureStore();
-const history = createHistory();
-const pram = new Pram(history);
+// const history = createHistory();
+// const pram = new Pram(history);
 
-const params = pram.getParams();
-console.log('params', params);
+// const params = pram.getParams();
+// console.log('params', params);
 // if (params[urlSearchParams.refCode]) {
 //   store.dispatch(selectionStateBranch.actions.setRefCode(params[urlSearchParams.refCode]));
 // }
