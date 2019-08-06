@@ -11,18 +11,15 @@ class MainLayout extends React.Component {
     const { children } = this.props;
     return (
       <Layout className="layout">
-        <Header className="header-banner" />
+        <Header className="header-banner">
+          <span className="main-title">Town Hall Maine</span>
+        </Header>
         <Content style={{ padding: '50px' }}>
-          <div style={{
-            background: '#fff',
-            minHeight: 280,
-            padding: 24,
-            }}
-          >
+          <div style={{ background: 'rgb(240, 242, 245)', padding: 24, minHeight: 280 }}>
             {children}
           </div>
         </Content>
-        <Footer style={{ background: '#b0b1b1', textAlign: 'center' }} />
+        <Footer style={{ background: '#021033', textAlign: 'center' }}></Footer>
       </Layout>
     );
   }

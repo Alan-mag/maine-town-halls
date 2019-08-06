@@ -6,7 +6,6 @@ import AppRouter from './routers/AppRouter';
 
 import './style/app.scss';
 
-
 const jsx = (
   <Provider>
     <AppRouter />

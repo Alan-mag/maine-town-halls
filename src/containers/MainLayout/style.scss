@@ -7,5 +7,12 @@
 }
 
 .header-banner {
-  height: 25vh !important;
+  height: 15vh !important;
+  display: flex !important;
+  background: #013778 !important;
+  align-items: center !important;
+  .main-title {
+    color: white;
+    font-size: 5em;
+  }
 }
