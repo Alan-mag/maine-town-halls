@@ -7,26 +7,6 @@
 }
 
 .layout {
-  .ant-layout-header {
-    padding: 0 80px !important;
-  }
-  .header-banner {
-    height: 35vh !important;
-    display: flex !important;
-    background: #03A9F4 !important;
-    flex-direction: column;
-    text-align: center;
-    .main-title {
-      color: white;
-      font-size: 5em;
-      margin-top: 3vh;
-      font-weight: 600;
-    }
-    .main-subtitle {
-      color: #f5f5f5;
-    }
-  }
-  
   .ant-layout-content {
     margin-top: -10vh;
     padding-top: 0 !important;
@@ -42,6 +22,5 @@
     background: #ecedef;
     text-align: center;
   }
-}
 
 
