@@ -8,7 +8,7 @@ import EventCard from '../../components/EventCard';
 import MainLayout from '../../components/MainLayout';
 import './style.scss';
 import { firebasedb } from '../../utils/firebase';
-import eventIds from '../../constants';
+import { eventIds } from '../../constants';
 
 class Homepage extends React.Component {
   constructor(props) {
