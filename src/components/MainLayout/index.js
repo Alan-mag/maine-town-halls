@@ -27,6 +27,7 @@ class MainLayout extends React.Component {
             {children}
           </div>
         </Content>
+        <CrowdBanner />
         <Footer className="layout-footer" style={{ textAlign: 'center' }} />
       </Layout>
     );
