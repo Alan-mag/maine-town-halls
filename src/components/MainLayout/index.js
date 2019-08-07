@@ -1,13 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import CrowdBanner from '../../components/CrowdBanner';
-
 import { Layout } from 'antd';
+import PropTypes from 'prop-types';
+
+import CrowdBanner from '../../components/CrowdBanner';
 import HeaderBanner from '../Header';
+import FooterBanner from '../Footer';
 
 import './style.scss';
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 
 class MainLayout extends React.Component {
   render() {
@@ -28,7 +29,7 @@ class MainLayout extends React.Component {
           </div>
         </Content>
         <CrowdBanner />
-        <Footer className="layout-footer" style={{ textAlign: 'center' }} />
+        <FooterBanner />
       </Layout>
     );
   }
