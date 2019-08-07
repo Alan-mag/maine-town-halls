@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import { Layout, Row, Col } from 'antd';
+import CrowdBanner from '../../components/CrowdBanner';
+import { Layout } from 'antd';
 import './style.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -12,7 +12,7 @@ class MainLayout extends React.Component {
     return (
       <Layout className="layout">
         <Header className="header-banner">
-          <div className="main-title">Town Hall Maine</div>
+          <div className="main-title">TOWN HALLS FOR MAINE</div>
           <div className="main-subtitle">Town Hall Maine Subtitle Text Here</div>
         </Header>
         <Content style={{ padding: '50px' }}>
@@ -20,7 +20,8 @@ class MainLayout extends React.Component {
             {children}
           </div>
         </Content>
-        <Footer className="layout-footer" style={{ textAlign: 'center' }}></Footer>
+        <CrowdBanner />
+        <Footer className="layout-footer">Privacy Policy</Footer>
       </Layout>
     );
   }

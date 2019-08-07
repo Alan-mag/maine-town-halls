@@ -1,6 +1,7 @@
 .event-card {
   border-radius: 5px;
   box-shadow: 0px 0px 5px #cacaca;
+  margin-top: 2vh;
   .ant-card-cover {
     position: relative;
   }
@@ -88,6 +89,10 @@
       width: 150px;
       margin: 0 auto;
       cursor: pointer;
+      a {
+        text-decoration: none;
+        color: white;
+      }
     }
   }
   .event-card-notes {
