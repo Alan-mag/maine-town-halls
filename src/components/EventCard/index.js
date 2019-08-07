@@ -33,6 +33,9 @@ const EventCard = (props) => {
           <Row gutter={16}>
             <Col span={12}>
               <h3>{eventData.eventName}</h3>
+              <strong>{eventData.Time}</strong>
+              <br />
+              <strong>{eventData.dateString}</strong>
             </Col>
             <Col span={12}>
               <RsvpButton
@@ -44,13 +47,11 @@ const EventCard = (props) => {
         </div>
       </div>
       <div className="event-card-date">
-        <Divider orientation="left">DATE & LOCATION</Divider>
+        <Divider orientation="left">LOCATION</Divider>
         <div className="event-card-section-content">
           <Row gutter={16}>
             <Col span={12}>
-              <strong>{eventData.Time}</strong>
-              <br />
-              <strong>{eventData.dateString}</strong>
+              {eventData.Location && (<strong>{eventData.Location}<br /></strong>)}
               <br /> 
               {eventData.address}
             </Col>
