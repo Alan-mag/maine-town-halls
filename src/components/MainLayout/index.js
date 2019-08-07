@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CrowdBanner from '../../components/CrowdBanner';
 
 import { Layout } from 'antd';
 import HeaderBanner from '../Header';
@@ -26,6 +27,7 @@ class MainLayout extends React.Component {
             {children}
           </div>
         </Content>
+        <CrowdBanner />
         <Footer className="layout-footer" style={{ textAlign: 'center' }} />
       </Layout>
     );
