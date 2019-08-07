@@ -1,4 +1,4 @@
-export const eventIds = ['-LTUri3O9XXeXvZQ10jx', '-LVfFVHwNT9mNkM_9KFz'];
+export const eventIds = ['-LjKtzJy1jM6LZ3p_wyK', '-LjKNp6oHbsNeOpFfT-k'];
 
 export const partners = [{
   href: 'https://www.townhallproject.com',
