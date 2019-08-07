@@ -5,7 +5,7 @@ import {
 } from 'antd';
 
 import EventCard from '../../components/EventCard';
-import MainLayout from '../MainLayout';
+import MainLayout from '../../components/MainLayout';
 import './style.scss';
 import { firebasedb } from '../../utils/firebase';
 import eventIds from '../../constants';

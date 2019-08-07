@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Divider, Row, Col } from 'antd';
 
-import RsvpButton from '../../containers/RsvpButton';
+import RsvpButton from '../RsvpButton';
 
 import './style.scss';
 
@@ -37,7 +37,7 @@ const EventCard = (props) => {
             <Col span={12}>
               <RsvpButton
                 eventName={eventData.eventName}
-                eventId={eventData.id}
+                eventId={eventData.eventId}
               />
             </Col>
           </Row>
