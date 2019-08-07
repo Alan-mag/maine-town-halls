@@ -15,11 +15,18 @@ class MainLayout extends React.Component {
       <Layout className="layout">
         <HeaderBanner />
         <Content style={{ padding: '50px' }}>
-          <div style={{ background: 'rgb(240, 242, 245)', padding: 24, minHeight: 280 }} className="container">
+          <div
+            style={{
+              background: 'rgb(240, 242, 245)',
+              minHeight: 280,
+              padding: 24,
+              }}
+            className="container"
+          >
             {children}
           </div>
         </Content>
-        <Footer className="layout-footer" style={{ textAlign: 'center' }}></Footer>
+        <Footer className="layout-footer" style={{ textAlign: 'center' }} />
       </Layout>
     );
   }

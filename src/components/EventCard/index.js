@@ -37,7 +37,7 @@ const EventCard = (props) => {
             <Col span={12}>
               <RsvpButton
                 eventName={eventData.eventName}
-                eventId={eventData.id}
+                eventId={eventData.eventId}
               />
             </Col>
           </Row>
