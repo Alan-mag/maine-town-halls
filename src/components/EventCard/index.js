@@ -31,13 +31,13 @@ const EventCard = (props) => {
         <Divider orientation="left">EVENT</Divider>
         <div className="event-card-section-content">
           <Row gutter={16}>
-            <Col span={12}>
+            <Col xs={24} sm={24} md={24} lg={12} xl={12}>
               <h3>{eventData.eventName}</h3>
               <strong>{eventData.Time}</strong>
               <br />
               <strong>{eventData.dateString}</strong>
             </Col>
-            <Col span={12}>
+            <Col xs={24} sm={24} md={24} lg={12} xl={12}>
               <RsvpButton
                 eventName={eventData.eventName}
                 eventId={eventData.eventId}

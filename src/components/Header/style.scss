@@ -1,15 +1,19 @@
 .header-banner {
-    height: 35vh !important;
     display: flex !important;
     background: #03A9F4;
     flex-direction: column;
     text-align: center;
     line-height: 1;
+    height: auto;
+    padding-bottom: 10vh;
+    padding-top: 5vh;
     
     .main-title {
         color: white;
         font-size: 5em;
         margin-top: 3vh;
+        text-transform: uppercase;
+        font-weight: 600;
     }
 
     .main-subtitle {
