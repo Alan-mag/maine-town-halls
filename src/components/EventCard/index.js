@@ -9,10 +9,12 @@ import './style.scss';
 const EventCard = (props) => {
   const {
     eventData,
+    loading,
   } = props;
   return (
     <Card
       className="event-card"
+      loading={loading}
       // cover={<img src={`http://maps.googleapis.com/maps/api/staticmap?center=${eventData.formatLatLng}&zoom=10&size=600x300&maptype=roadmap&key=AIzaSyBkezlJl3YY3_PT6sfu4Kc99hda3az0Heg`} alt="map" />}
       title={
         <div className="event-card-header">
@@ -70,6 +72,7 @@ const EventCard = (props) => {
 
 EventCard.propTypes = {
   eventData: PropTypes.shape({}).isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 export default EventCard;
