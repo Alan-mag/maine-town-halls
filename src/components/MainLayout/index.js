@@ -16,7 +16,7 @@ class MainLayout extends React.Component {
     return (
       <Layout className="layout">
         <HeaderBanner />
-        <Content style={{ padding: '50px' }}>
+        <Content className="main-content">
           <div
             style={{
               background: 'rgb(240, 242, 245)',

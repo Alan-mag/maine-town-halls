@@ -1,18 +1,26 @@
 .header-banner {
-    height: 35vh !important;
     display: flex !important;
     background: #03A9F4;
     flex-direction: column;
     text-align: center;
     line-height: 1;
+    height: auto;
+    padding-bottom: 10vh;
+    padding-top: 5vh;
     
     .main-title {
         color: white;
         font-size: 5em;
         margin-top: 3vh;
+        text-transform: uppercase;
+        font-weight: 600;
     }
 
     .main-subtitle {
         color: #f5f5f5;
+        width: 75vw;
+        margin: 0 auto;
+        font-family: 'lato';
+        font-weight: 200;
     }
 }

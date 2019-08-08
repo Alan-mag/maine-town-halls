@@ -12,6 +12,7 @@ const {
 
 const FooterBanner = () => (
   <Footer className="layout-footer" style={{ textAlign: 'center' }} >
+    <div className="partners-container">Town Hall Organizing Partners</div>
     <Row type="flex" justify="center">
       {partners.map(partner => (
 
@@ -26,6 +27,7 @@ const FooterBanner = () => (
         </Col>
       ))}
     </Row>
+    <div className="privacy-policy-container">Privacy Policy</div>
   </Footer>
 );
 
