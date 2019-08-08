@@ -16,19 +16,21 @@ const EventCard = (props) => {
       className="event-card"
       loading={loading}
       // cover={<img src={`http://maps.googleapis.com/maps/api/staticmap?center=${eventData.formatLatLng}&zoom=10&size=600x300&maptype=roadmap&key=AIzaSyBkezlJl3YY3_PT6sfu4Kc99hda3az0Heg`} alt="map" />}
-      title={
-        <div className="event-card-header">
-          <div className="member-icon">
-            {/*<img src={''} alt="member-pic" />*/}
-          </div>
-          <div className="event-card-header-title">
-            <span className="title">{eventData.displayName}</span> <br /> <span className="subtitle">{eventData.district}</span>
-          </div>
-        </div>
-      }
+      // title={
+      //   <div className="event-card-header">
+      //     <div className="member-icon">
+      //       {/*<img src={''} alt="member-pic" />*/}
+      //     </div>
+      //     <div className="event-card-header-title">
+      //       <span className="title">{eventData.displayName}</span> <br /> <span className="subtitle">{eventData.district}</span>
+      //     </div>
+      //   </div>
+      // }
     >
       <div className="event-card-title">
-        <Divider orientation="left">EVENT</Divider>
+        {/*<Divider orientation="left">
+          EVENT
+        </Divider>*/}
         <div className="event-card-section-content">
           <Row gutter={16}>
             <Col xs={24} sm={24} md={24} lg={12} xl={12}>
