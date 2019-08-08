@@ -28,9 +28,9 @@ const plugins = [
     template: `${__dirname}/src/index.html`,
   }),
   new CopyWebpackPlugin([
-    // {
-    //   from: 'src/CNAME',
-    // },
+    {
+      from: 'src/CNAME',
+    },
     {
       flatten: true,
       from: 'src/assets/images',
