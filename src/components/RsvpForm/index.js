@@ -133,7 +133,7 @@ class RsvpForm extends React.Component {
         </Form.Item>
         <Form.Item
           {...tailFormItemLayout}
-          label="Accessibly needs"
+          label="Accessibility needs"
         >
           {getFieldDecorator('accessibly_needs', {
               initialValue: '',
