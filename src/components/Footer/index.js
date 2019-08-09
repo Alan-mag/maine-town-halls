@@ -12,7 +12,9 @@ const {
 
 const FooterBanner = () => (
   <Footer className="layout-footer" style={{ textAlign: 'center' }} >
-    <div className="partners-container">Town Hall Organizing Partners</div>
+    <div className="partners-container">
+      <h2>Town Hall Hosts</h2>
+    </div>
     <Row type="flex" justify="center">
       {partners.map(partner => (
 
