@@ -38,7 +38,7 @@ const EventCard = (props) => {
             </Col>
             <Col xs={24} sm={12}>
               <RsvpButton
-                eventName={eventData.eventName}
+                eventAddress={eventData.address}
                 eventId={eventData.eventId}
               />
             </Col>
