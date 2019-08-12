@@ -28,7 +28,7 @@ const EventCard = (props) => {
       // }
     >
       <div className="event-card-title">
-        <div className="event-card-section-content">
+        <div className="event-card-section-top-content">
           <Row gutter={16}>
             <Col xs={24} sm={12}>
               <h3>{eventData.eventName}</h3>
