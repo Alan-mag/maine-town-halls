@@ -30,14 +30,12 @@ class RsvpButton extends React.Component {
       eventId,
     } = this.props;
     this.setState({ loading: true });
-    console.log('got data', data, eventId);
     const fullData = {
       ...data,
       eventId,
     };
 
     if (data.family_name && data.given_name && data.email_address) {
-      console.log('pushing');
       firebasedb.ref(`rsvps/${eventId}`).push(fullData)
         .then(() => {
           this.handleCloseOnSubmit();
@@ -49,14 +47,12 @@ class RsvpButton extends React.Component {
   }
 
   handleClose(e) {
-    console.log(e);
     this.setState({
       visible: false,
     });
   }
 
   handleCloseOnSubmit(e) {
-    console.log(e);
     this.setState({
       confirmed: true,
       loading: false,
@@ -66,11 +62,12 @@ class RsvpButton extends React.Component {
 
   render() {
     const {
-      eventName,
+      eventAddress,
     } = this.props;
     const {
       confirmed,
     } = this.state;
+    const modalTitle = eventAddress.includes('Portland') ? 'Town Hall for Portland, Maine.' : 'Town Hall for Bangor, Maine';
     return (
       <div>
         <div className="rsvp-btn" onClick={this.showModal}>
@@ -78,7 +75,7 @@ class RsvpButton extends React.Component {
         </div>
         <Modal
           footer={null}
-          title={`RSVP for ${eventName}`}
+          title={modalTitle}
           visible={this.state.visible}
           onCancel={this.handleClose}
           closable
@@ -95,7 +92,7 @@ class RsvpButton extends React.Component {
 
 RsvpButton.propTypes = {
   eventId: PropTypes.string.isRequired,
-  eventName: PropTypes.string.isRequired,
+  eventAddress: PropTypes.string.isRequired,
 };
 
 export default RsvpButton;

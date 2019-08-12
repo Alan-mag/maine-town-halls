@@ -24,10 +24,13 @@
 
     .main-subtitle {
         margin: 0 auto;
+        .time-senator {
+            font-weight: 900;
+        }
         p {
             color: #f5f5f5;
             width: 50vw;
-            font-family: 'lato', Arial, Helvetica, sans-serif;
+            font-family: 'Lato', sans-serif, Arial, Helvetica, sans-serif;
             font-size: 20px;
             font-weight: 300;
             .senator-time {

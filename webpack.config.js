@@ -25,6 +25,7 @@ const plugins = [
   }),
 
   new HTMLPlugin({
+    favicon: `${__dirname}/src/assets/images/lighthouse-icon.ico`,
     template: `${__dirname}/src/index.html`,
   }),
   new CopyWebpackPlugin([
@@ -40,7 +41,7 @@ const plugins = [
 ];
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
 
   plugins,
   resolve: {
