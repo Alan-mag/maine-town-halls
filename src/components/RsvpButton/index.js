@@ -30,14 +30,12 @@ class RsvpButton extends React.Component {
       eventId,
     } = this.props;
     this.setState({ loading: true });
-    console.log('got data', data, eventId);
     const fullData = {
       ...data,
       eventId,
     };
 
     if (data.family_name && data.given_name && data.email_address) {
-      console.log('pushing');
       firebasedb.ref(`rsvps/${eventId}`).push(fullData)
         .then(() => {
           this.handleCloseOnSubmit();
@@ -49,14 +47,12 @@ class RsvpButton extends React.Component {
   }
 
   handleClose(e) {
-    console.log(e);
     this.setState({
       visible: false,
     });
   }
 
   handleCloseOnSubmit(e) {
-    console.log(e);
     this.setState({
       confirmed: true,
       loading: false,
