@@ -37,8 +37,6 @@ class Homepage extends React.Component {
 
   render() {
     const { event1, event2, loading } = this.state;
-    console.log(event1);
-    console.log(event2);
     return (
       <MainLayout>
         <Row gutter={16}>
