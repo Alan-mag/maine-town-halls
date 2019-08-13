@@ -10,12 +10,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const plugins = [
   new EnvironmentPlugin({
-    DATABASE_URL: 'https://townhalltestingsms.firebaseio.com',
-    FIREBASE_API_KEY: 'AIzaSyCJncx2G6bUnecl4H2VHSBTDfRRxg7H5Fs',
-    FIREBASE_AUTH_DOMAIN: 'townhalltestingsms.firebaseapp.com',
-    MESSAGING_SENDER_ID: 86976100332,
-    PROJECT_ID: 'townhalltestingsms',
-    STORAGE_BUCKET: 'townhalltestingsms.appspot.com',
+    DATABASE_URL: 'https://townhallproject-86312.firebaseio.com',
+    FIREBASE_API_KEY: 'AIzaSyCXyjAOvBKDEX5pckTwuI7LODWKNlL21gc',
+    FIREBASE_AUTH_DOMAIN: 'townhallproject-86312.firebaseapp.com',
+    MESSAGING_SENDER_ID: 208752196071,
+    PROJECT_ID: 'townhallproject-86312',
+    STORAGE_BUCKET: 'townhallproject-86312.appspot.com',
   }),
   new MiniCssExtractPlugin({
     // Options similar to the same options in webpackOptions.output
