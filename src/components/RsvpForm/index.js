@@ -4,6 +4,7 @@ import {
   Checkbox,
   Button,
 } from 'antd';
+import moment from 'moment';
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -31,7 +32,11 @@ class RsvpForm extends React.Component {
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
-        submitRsvp(values);
+        const toSubmit = {
+          ...values,
+          date_submitted: moment().format(),
+        };
+        submitRsvp(toSubmit);
       }
     });
   }
