@@ -29,7 +29,7 @@ const FooterBanner = () => (
         </Col>
       ))}
     </Row>
-    <div className="privacy-policy-container">Privacy Policy</div>
+    <div className="privacy-policy-container"><a href="https://townhallproject.com/#privacy-policy" target="_blank">Privacy Policy</a></div>
   </Footer>
 );
 
