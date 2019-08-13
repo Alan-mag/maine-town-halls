@@ -1,6 +1,8 @@
 // FIREBASE METHODS
 // Initialize Firebase
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/database';
+
 
 if (process.env.NODE_ENV !== 'production') {
   // console.log(`USING: ${process.env.PROJECT_ID}`);
@@ -19,7 +21,6 @@ firebase.initializeApp(config);
 
 const firebasedb = firebase.database();
 
-export {
-  firebase,
-  firebasedb,
-};
+export { firebasedb };
+
+export default firebasedb;
