@@ -12,6 +12,7 @@ const {
   TextArea,
 } = Input;
 
+import './style.scss';
 
 class RsvpForm extends React.Component {
   constructor(props) {
@@ -126,6 +127,19 @@ class RsvpForm extends React.Component {
           {getFieldDecorator('phone', {
             rules: [{
                 message: 'Please input your phone number',
+                required: false,
+            }],
+          })(<Input style={{ width: '100%' }} />)}
+        </Form.Item>
+        <Form.Item 
+          {...tailFormItemLayout}
+          label="Where did you hear about this event?"
+          labelCol={{ offset: 8, span: 16 }}
+          colon={false}
+          className="solicitation-code"
+        >
+          {getFieldDecorator('solicitation_source', {
+            rules: [{
                 required: false,
             }],
           })(<Input style={{ width: '100%' }} />)}
