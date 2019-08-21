@@ -20,9 +20,11 @@ class RsvpButton extends React.Component {
   }
 
   showModal() {
-    this.setState({
-      visible: true,
-    });
+    if (!this.props.disabled) {
+      this.setState({
+        visible: true,
+      });
+    }
   }
 
   submitRsvp(data) {
@@ -90,9 +92,14 @@ class RsvpButton extends React.Component {
   }
 }
 
+RsvpButton.defaultProps = {
+  disabled: false,
+};
+
 RsvpButton.propTypes = {
-  eventId: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
   eventAddress: PropTypes.string.isRequired,
+  eventId: PropTypes.string.isRequired,
 };
 
 export default RsvpButton;
