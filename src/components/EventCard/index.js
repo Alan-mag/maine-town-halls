@@ -10,6 +10,7 @@ const EventCard = (props) => {
   const {
     eventData,
     loading,
+    disabled,
   } = props;
   return (
     <Card
@@ -40,6 +41,7 @@ const EventCard = (props) => {
               <RsvpButton
                 eventAddress={eventData.address}
                 eventId={eventData.eventId}
+                disabled={disabled}
               />
             </Col>
           </Row>
@@ -74,7 +76,12 @@ const EventCard = (props) => {
   );
 };
 
+EventCard.defaultProps = {
+  disabled: false,
+};
+
 EventCard.propTypes = {
+  disabled: PropTypes.bool,
   eventData: PropTypes.shape({}).isRequired,
   loading: PropTypes.bool.isRequired,
 };
