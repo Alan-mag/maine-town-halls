@@ -69,7 +69,7 @@ class RsvpButton extends React.Component {
     const {
       confirmed,
     } = this.state;
-    const modalTitle = eventAddress.includes('Portland') ? 'Town Hall for Portland, Maine.' : 'Town Hall for Bangor, Maine';
+    const modalTitle = eventAddress.includes('Desert') ? 'Town Hall for Bar Harbor' : 'Town Hall for Lewiston';
     return (
       <div>
         <div className="rsvp-btn" onClick={this.showModal}>
