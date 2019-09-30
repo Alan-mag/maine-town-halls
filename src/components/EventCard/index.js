@@ -6,27 +6,29 @@ import RsvpButton from '../RsvpButton';
 
 import './style.scss';
 
+function getEventTitle(event) {
+  if (!event.address) { return ''; }
+  return event.address.includes('Harbor') ? 'Town Hall for Bar Harbor' : 'Town Hall for Lewiston';
+}
+
 const EventCard = (props) => {
   const {
     eventData,
     loading,
     disabled,
   } = props;
+  const eventTitle = getEventTitle(eventData);
   return (
     <Card
       className="event-card"
       loading={loading}
-      // cover={<img src={`http://maps.googleapis.com/maps/api/staticmap?center=${eventData.formatLatLng}&zoom=10&size=600x300&maptype=roadmap&key=AIzaSyBkezlJl3YY3_PT6sfu4Kc99hda3az0Heg`} alt="map" />}
-      // title={
-      //   <div className="event-card-header">
-      //     <div className="member-icon">
-      //       {/*<img src={''} alt="member-pic" />*/}
-      //     </div>
-      //     <div className="event-card-header-title">
-      //       <span className="title">{eventData.displayName}</span> <br /> <span className="subtitle">{eventData.district}</span>
-      //     </div>
-      //   </div>
-      // }
+      title={
+        <div className="event-card-header">
+          <div className="event-card-header-title">
+            <span className="title">{eventTitle}</span>
+          </div>
+        </div>
+      }
     >
       <div className="event-card-title">
         <div className="event-card-section-top-content">
