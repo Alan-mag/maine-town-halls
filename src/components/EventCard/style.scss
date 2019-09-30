@@ -73,7 +73,7 @@
       font-weight: 600;
       width: 150px;
       margin: 0 auto;
-      cursor: not-allowed;
+      cursor: pointer;
     }
   }
   .event-card-date {
@@ -93,11 +93,11 @@
       font-weight: 600;
       width: 150px;
       margin: 0 auto;
-      cursor: not-allowed;
+      cursor: pointer;
       a {
         text-decoration: none;
         color: white;
-        cursor: not-allowed;
+        // cursor: not-allowed;
       }
     }
   }
