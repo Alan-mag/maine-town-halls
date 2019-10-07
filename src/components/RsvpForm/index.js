@@ -139,6 +139,7 @@ class RsvpForm extends React.Component {
           className="solicitation-code"
         >
           {getFieldDecorator('solicitation_source', {
+            initialValue: '',
             rules: [{
                 required: false,
             }],
