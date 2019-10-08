@@ -6,18 +6,13 @@ import RsvpButton from '../RsvpButton';
 
 import './style.scss';
 
-function getEventTitle(event) {
-  if (!event.address) { return ''; }
-  return event.address.includes('Harbor') ? 'Town Hall for Bar Harbor' : 'Town Hall for Lewiston';
-}
-
 const EventCard = (props) => {
   const {
     eventData,
     loading,
     disabled,
+    title,
   } = props;
-  const eventTitle = getEventTitle(eventData);
   return (
     <Card
       className="event-card"
@@ -25,7 +20,7 @@ const EventCard = (props) => {
       title={
         <div className="event-card-header">
           <div className="event-card-header-title">
-            <span className="title">{eventTitle}</span>
+            <span className="title">{title}</span>
           </div>
         </div>
       }
@@ -86,6 +81,7 @@ EventCard.propTypes = {
   disabled: PropTypes.bool,
   eventData: PropTypes.shape({}).isRequired,
   loading: PropTypes.bool.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default EventCard;

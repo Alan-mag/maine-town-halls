@@ -48,13 +48,13 @@ class RsvpButton extends React.Component {
     }
   }
 
-  handleClose(e) {
+  handleClose() {
     this.setState({
       visible: false,
     });
   }
 
-  handleCloseOnSubmit(e) {
+  handleCloseOnSubmit() {
     this.setState({
       confirmed: true,
       loading: false,

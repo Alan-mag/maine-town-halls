@@ -57,7 +57,6 @@
       font-weight: 600;
       width: 150px;
       margin: 0 auto;
-      cursor: pointer;
     }
   }
   .event-card-date {
@@ -77,7 +76,6 @@
       font-weight: 600;
       width: 150px;
       margin: 0 auto;
-      cursor: pointer;
       a {
         text-decoration: none;
         color: white;
@@ -121,4 +119,15 @@
 }
 .ant-divider-horizontal.ant-divider-with-text-left::after {
   border: none !important;
+}
+
+.disable-screen .rsvp-btn {
+  cursor: not-allowed;
+}
+
+.disable-screen .directions-btn {
+  cursor: not-allowed;
+  a {
+    cursor: not-allowed;
+  }
 }
