@@ -27,11 +27,10 @@ class Homepage extends React.Component {
     this.state = {
       event1: event1Data,
       event2: event2Data,
-      event1Type: 'live',
+      event1Type: 'past',
       event2Type: 'postponed',
       loading: true,
     };
-
   }
   componentDidMount() {
     const {
