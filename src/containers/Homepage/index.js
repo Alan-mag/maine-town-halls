@@ -27,7 +27,7 @@ class Homepage extends React.Component {
     this.state = {
       event1: event1Data,
       event2: event2Data,
-      event1Type: 'past',
+      event1Type: 'live',
       event2Type: 'postponed',
       loading: true,
     };
@@ -93,12 +93,12 @@ class Homepage extends React.Component {
     return (
       <MainLayout>
         <Row gutter={16}>
-          <Col xs={24} sm={24} md={24} lg={12} xl={12}>
+          <Col xs={24} sm={24} md={24} lg={24} xl={24}>
             {renderMap[event1Type](event1, eventTitles[0])}
           </Col>
-          <Col xs={24} sm={24} md={24} lg={12} xl={12}>
+          {/* <Col xs={24} sm={24} md={24} lg={12} xl={12}>
             {renderMap[event2Type](event2, eventTitles[1])}
-          </Col>
+          </Col> */}
         </Row>
       </MainLayout>
     );
