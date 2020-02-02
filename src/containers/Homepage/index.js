@@ -12,7 +12,7 @@ import { firebasedb } from '../../utils/firebase';
 import {
   eventIds,
   event1Data,
-  event2Data,
+  // event2Data,
   eventTitles,
 } from '../../constants';
 import EventSuccessCard from '../../components/EventSuccessCard';
@@ -26,24 +26,24 @@ class Homepage extends React.Component {
     this.renderPast = this.renderPast.bind(this);
     this.state = {
       event1: event1Data,
-      event2: event2Data,
-      event1Type: 'past',
-      event2Type: 'postponed',
+      // event2: event2Data,
+      event1Type: 'live',
+      // event2Type: 'postponed',
       loading: true,
     };
   }
   componentDidMount() {
     const {
       event1, 
-      event2,
+      // event2,
     } = this.state;
     const promises = [];
     if (isEmpty(event1)) {
       promises.push(firebasedb.ref(`townHalls/${eventIds[0]}`).once('value'));
     }
-    if (isEmpty(event2)) {
-      promises.push(firebasedb.ref(`townHalls/${eventIds[1]}`).once('value'));
-    }
+    // if (isEmpty(event2)) {
+    //   promises.push(firebasedb.ref(`townHalls/${eventIds[1]}`).once('value'));
+    // }
     Promise.all(promises)
       .then(eventData => eventData.reduce((acc, cur, index) => {
         acc[`event${index + 1}`] = cur.val();
@@ -81,9 +81,9 @@ class Homepage extends React.Component {
   render() {
     const {
       event1,
-      event2,
+      // event2,
       event1Type,
-      event2Type,
+      // event2Type,
     } = this.state;
     const renderMap = {
       live: this.renderLive,
@@ -93,12 +93,12 @@ class Homepage extends React.Component {
     return (
       <MainLayout>
         <Row gutter={16}>
-          <Col xs={24} sm={24} md={24} lg={12} xl={12}>
+          <Col xs={24} sm={24} md={24} lg={24} xl={24}>
             {renderMap[event1Type](event1, eventTitles[0])}
           </Col>
-          <Col xs={24} sm={24} md={24} lg={12} xl={12}>
+          {/* <Col xs={24} sm={24} md={24} lg={12} xl={12}>
             {renderMap[event2Type](event2, eventTitles[1])}
-          </Col>
+          </Col> */}
         </Row>
       </MainLayout>
     );

@@ -22,6 +22,8 @@ class MainLayout extends React.Component {
               background: 'rgb(240, 242, 245)',
               minHeight: 280,
               padding: 24,
+              width: '50vw',
+              margin: `0 auto`,
               }}
             className="container"
           >
