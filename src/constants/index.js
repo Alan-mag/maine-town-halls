@@ -10,6 +10,6 @@ export const partners = [{
   name: '16counties',
   src: '16counties_square_color.png',
 },
-]
+];
 export const event1Data = {};
 export const event2Data = {};
