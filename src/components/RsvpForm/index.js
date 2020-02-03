@@ -125,6 +125,7 @@ class RsvpForm extends React.Component {
         </Form.Item>
         <Form.Item label="Phone Number">
           {getFieldDecorator('phone', {
+            initialValue: '',
             rules: [{
                 message: 'Please input your phone number',
                 required: false,

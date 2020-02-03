@@ -1,7 +1,10 @@
 import { Modal } from 'antd';
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import {
+  mapValues,
+  isUndefined,
+} from 'lodash';
 import { firebasedb } from '../../utils/firebase';
 import WrappedRsvpForm from '../RsvpForm';
 
@@ -36,19 +39,22 @@ class RsvpButton extends React.Component {
       ...data,
       eventId,
     };
-    console.log('submitting:', fullData);
-
-    if (data.family_name && data.given_name && data.email_address) {
-      return firebasedb.ref(`rsvps/${eventId}`).push(fullData)
+    const cleanData = mapValues(fullData, (value) => {
+      if (isUndefined(value)) {
+        return '';
+      }
+      return value;
+    });
+    console.log('submitting:', cleanData);
+    if (cleanData.family_name && cleanData.given_name && cleanData.email_address) {
+      return firebasedb.ref(`rsvps/${eventId}`).push(cleanData)
         .then(() => {
-          console.log('closing')
           this.handleCloseOnSubmit();
         })
         .catch((error) => {
           console.log('err', error);
         });
     }
-    return console.log('missing data.family_name, data.given_name or data.email_address', data);
   }
 
   handleClose() {
