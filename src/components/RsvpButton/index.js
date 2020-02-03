@@ -45,6 +45,8 @@ class RsvpButton extends React.Component {
         .catch((error) => {
           console.log('err', error);
         });
+    } else {
+      console.log('missing data.family_name, data.given_name or data.email_address', data);
     }
   }
 
