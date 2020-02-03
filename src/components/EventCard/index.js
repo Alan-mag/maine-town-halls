@@ -39,6 +39,7 @@ const EventCard = (props) => {
                 eventAddress={eventData.address}
                 eventId={eventData.eventId}
                 disabled={disabled}
+                title={title}
               />
             </Col>
           </Row>

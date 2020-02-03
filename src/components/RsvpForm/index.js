@@ -131,7 +131,7 @@ class RsvpForm extends React.Component {
             }],
           })(<Input style={{ width: '100%' }} />)}
         </Form.Item>
-        <Form.Item 
+        <Form.Item
           {...tailFormItemLayout}
           label="Where did you hear about this event?"
           labelCol={{ offset: 8, span: 16 }}

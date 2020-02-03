@@ -65,11 +65,11 @@ class RsvpButton extends React.Component {
   render() {
     const {
       eventAddress,
+      title
     } = this.props;
     const {
       confirmed,
     } = this.state;
-    const modalTitle = eventAddress.includes('Desert') ? 'Town Hall for Bar Harbor' : 'Town Hall for Lewiston';
     return (
       <div>
         <div className="rsvp-btn" onClick={this.showModal}>
@@ -77,7 +77,7 @@ class RsvpButton extends React.Component {
         </div>
         <Modal
           footer={null}
-          title={modalTitle}
+          title={title}
           visible={this.state.visible}
           onCancel={this.handleClose}
           closable
