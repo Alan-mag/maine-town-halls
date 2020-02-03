@@ -36,18 +36,19 @@ class RsvpButton extends React.Component {
       ...data,
       eventId,
     };
+    console.log('submitting:', fullData);
 
     if (data.family_name && data.given_name && data.email_address) {
-      firebasedb.ref(`rsvps/${eventId}`).push(fullData)
+      return firebasedb.ref(`rsvps/${eventId}`).push(fullData)
         .then(() => {
+          console.log('closing')
           this.handleCloseOnSubmit();
         })
         .catch((error) => {
           console.log('err', error);
         });
-    } else {
-      console.log('missing data.family_name, data.given_name or data.email_address', data);
     }
+    return console.log('missing data.family_name, data.given_name or data.email_address', data);
   }
 
   handleClose() {
@@ -66,7 +67,6 @@ class RsvpButton extends React.Component {
 
   render() {
     const {
-      eventAddress,
       title
     } = this.props;
     const {
@@ -100,8 +100,8 @@ RsvpButton.defaultProps = {
 
 RsvpButton.propTypes = {
   disabled: PropTypes.bool,
-  eventAddress: PropTypes.string.isRequired,
   eventId: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default RsvpButton;
