@@ -17,16 +17,7 @@ class MainLayout extends React.Component {
       <Layout className="layout">
         <HeaderBanner />
         <Content className="main-content">
-          <div
-            style={{
-              background: 'rgb(240, 242, 245)',
-              minHeight: 280,
-              padding: 24,
-              width: '50vw',
-              margin: `0 auto`,
-              }}
-            className="container"
-          >
+          <div className="container">
             {children}
           </div>
         </Content>

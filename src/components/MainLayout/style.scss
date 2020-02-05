@@ -14,9 +14,11 @@
     .container {
       background: rgb(240, 242, 245);
       padding: 24px;
+      margin: 0 auto;
       min-height: 280px;
       border-radius: 1px;
       box-shadow: 0px 4px 9px 0px #c5c5c5;
+      width: 50vw;
     }
   }
   .layout-footer {
@@ -25,17 +27,14 @@
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 600px) {
   .layout {
     .main-content {
       padding: 0px;
-      margin-top: 0vh;
       padding-top: 0 !important;
       .container {
+        width: 85vw;
       }
-    }
-    .layout-footer {
-
     }
   }
 }
