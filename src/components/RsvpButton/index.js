@@ -71,13 +71,13 @@ class RsvpButton extends React.Component {
 
   handleSuccess() {
     this.setState({
-      confirmed: true
+      confirmed: true,
+      loading: false,
     })
   }
 
   handleCloseSuccess() {
     this.setState({
-      loading: false,
       modalVisible: false,
     });
   }
