@@ -20,10 +20,9 @@ class RsvpButton extends React.Component {
     this.handleSuccess = this.handleSuccess.bind(this);
     this.submitRsvp = this.submitRsvp.bind(this);
     this.state = {
-      formVisible: true,
+      confirmed: false,
       loading: false,
       modalVisible: false,
-      successVisible: false,
     };
   }
 
@@ -72,14 +71,12 @@ class RsvpButton extends React.Component {
 
   handleSuccess() {
     this.setState({
-      formVisible: false,
-      successVisible: true
+      confirmed: true
     })
   }
 
   handleCloseSuccess() {
     this.setState({
-      confirmed: true,
       loading: false,
       modalVisible: false,
     });
@@ -91,9 +88,17 @@ class RsvpButton extends React.Component {
     } = this.props;
     const {
       confirmed,
-      formVisible,
-      successVisible
     } = this.state;
+    let content;
+    if (confirmed) {
+       content = <RsvpSuccess handleCloseSuccess={this.handleCloseSuccess} />;
+    } else {
+      content =
+        <WrappedRsvpForm
+          loading={this.state.loading}
+          submitRsvp={this.submitRsvp}
+        />;
+    }
     return (
       <div>
         <div className="rsvp-btn" onClick={this.showModal}>
@@ -106,18 +111,7 @@ class RsvpButton extends React.Component {
           onCancel={this.handleClose}
           closable
         >
-          {
-            formVisible &&
-              <WrappedRsvpForm
-                loading={this.state.loading}
-                submitRsvp={this.submitRsvp}
-                formVisible={this.state.formVisible}
-              />
-          }
-          {
-            successVisible &&
-              <RsvpSuccess handleCloseSuccess={this.handleCloseSuccess} />
-          }
+          {content}
         </Modal>
       </div>
     );

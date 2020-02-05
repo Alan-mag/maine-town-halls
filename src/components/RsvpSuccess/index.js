@@ -4,8 +4,6 @@ import { Button, Typography } from 'antd';
 
 const { Paragraph, Title } = Typography;
 
-import './style.scss';
-
 const RsvpSuccess = ({ handleCloseSuccess }) => {
   return (
     <div>
