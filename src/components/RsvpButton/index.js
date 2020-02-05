@@ -7,6 +7,7 @@ import {
 } from 'lodash';
 import { firebasedb } from '../../utils/firebase';
 import WrappedRsvpForm from '../RsvpForm';
+import RsvpSuccess from '../RsvpSuccess';
 
 import './style.scss';
 
@@ -15,17 +16,21 @@ class RsvpButton extends React.Component {
     super(props);
     this.showModal = this.showModal.bind(this);
     this.handleClose = this.handleClose.bind(this);
+    this.handleCloseSuccess = this.handleCloseSuccess.bind(this);
+    this.handleSuccess = this.handleSuccess.bind(this);
     this.submitRsvp = this.submitRsvp.bind(this);
     this.state = {
+      formVisible: true,
       loading: false,
-      visible: false,
+      modalVisible: false,
+      successVisible: false,
     };
   }
 
   showModal() {
     if (!this.props.disabled) {
       this.setState({
-        visible: true,
+        modalVisible: true,
       });
     }
   }
@@ -49,7 +54,9 @@ class RsvpButton extends React.Component {
     if (cleanData.family_name && cleanData.given_name && cleanData.email_address) {
       return firebasedb.ref(`rsvps/${eventId}`).push(cleanData)
         .then(() => {
-          this.handleCloseOnSubmit();
+          setTimeout(() => {
+            this.handleSuccess();
+          }, 1000);
         })
         .catch((error) => {
           console.log('err', error);
@@ -59,15 +66,22 @@ class RsvpButton extends React.Component {
 
   handleClose() {
     this.setState({
-      visible: false,
+      modalVisible: false,
     });
   }
 
-  handleCloseOnSubmit() {
+  handleSuccess() {
+    this.setState({
+      formVisible: false,
+      successVisible: true
+    })
+  }
+
+  handleCloseSuccess() {
     this.setState({
       confirmed: true,
       loading: false,
-      visible: false,
+      modalVisible: false,
     });
   }
 
@@ -77,6 +91,8 @@ class RsvpButton extends React.Component {
     } = this.props;
     const {
       confirmed,
+      formVisible,
+      successVisible
     } = this.state;
     return (
       <div>
@@ -86,14 +102,22 @@ class RsvpButton extends React.Component {
         <Modal
           footer={null}
           title={title}
-          visible={this.state.visible}
+          visible={this.state.modalVisible}
           onCancel={this.handleClose}
           closable
         >
-          <WrappedRsvpForm
-            loading={this.state.loading}
-            submitRsvp={this.submitRsvp}
-          />
+          {
+            formVisible &&
+              <WrappedRsvpForm
+                loading={this.state.loading}
+                submitRsvp={this.submitRsvp}
+                formVisible={this.state.formVisible}
+              />
+          }
+          {
+            successVisible &&
+              <RsvpSuccess handleCloseSuccess={this.handleCloseSuccess} />
+          }
         </Modal>
       </div>
     );
