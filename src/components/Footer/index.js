@@ -14,21 +14,21 @@ const FooterBanner = () => (
   <Footer className="layout-footer" style={{ textAlign: 'center' }} >
     <div className="partners-container">
       <h2>Town Hall Hosts</h2>
-    </div>
-    <Row type="flex" justify="center">
-      {partners.map(partner => (
+      <Row type="flex" justify="center">
+        {partners.map(partner => (
 
-        <Col sm={6} xs={8} key={partner.name}>
-          {/* <a
-            href={partner.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          > */}
-            <img src={`images/${partner.src}`} alt={`${partner.name} logo`} />
-          {/* </a> */}
-        </Col>
-      ))}
-    </Row>
+          <Col sm={6} xs={8} key={partner.name} className={`partner`}>
+            {/* <a
+              href={partner.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            > */}
+              <img src={`images/${partner.src}`} alt={`${partner.name} logo`} />
+            {/* </a> */}
+          </Col>
+        ))}
+      </Row>
+    </div>
     <div className="privacy-policy-container"><a href="https://townhallproject.com/#privacy-policy" target="_blank">Privacy Policy</a></div>
   </Footer>
 );
