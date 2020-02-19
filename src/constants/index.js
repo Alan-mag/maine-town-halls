@@ -20,7 +20,31 @@ export const partners = [{
   name: 'plannedParentHood',
   src: 'planned_parenthood.png',
 },
-
+{
+  href: '/',
+  name: 'mainersForAccountableLeadership',
+  src: 'leadership.png',
+},
+{
+  href: '/',
+  name: 'maineSmallBusinessCoalition',
+  src: 'small_business.png',
+},
+{
+  href: '/',
+  name: 'suitUpMaine',
+  src: 'suitup_maine.png',
+},
+{
+  href: '/',
+  name: 'indivisible',
+  src: 'indivisible.png',
+},
+{
+  href: '/',
+  name: 'demcast',
+  src: 'demcast.png',
+},
 ];
 export const event1Data = {};
 export const event2Data = {};
