@@ -11,7 +11,7 @@ export const partners = [{
   src: '16counties_square_color.png',
 },
 {
-  href: 'https://secure.actblue.com/donate/fund-susan-collins-future-opponent?refcode=website',
+  href: '',
   name: 'beAHero',
   src: 'be_a_hero.png',
 },

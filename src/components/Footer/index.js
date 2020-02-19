@@ -19,13 +19,13 @@ const FooterBanner = () => (
       {partners.map(partner => (
 
         <Col sm={6} xs={8} key={partner.name}>
-          <a
+          {/* <a
             href={partner.href}
             target="_blank"
             rel="noopener noreferrer"
-          >
+          > */}
             <img src={`images/${partner.src}`} alt={`${partner.name} logo`} />
-          </a>
+          {/* </a> */}
         </Col>
       ))}
     </Row>
